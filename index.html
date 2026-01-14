@@ -7,7 +7,6 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    /* Reset base */
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
@@ -16,6 +15,7 @@
       color: #3e3e3e;
       line-height: 1.6;
       text-align: center;
+      padding-bottom: 50px;
     }
 
     h1, h2 {
@@ -23,18 +23,12 @@
       color: #b97d4f;
     }
 
-    h1 {
-      font-size: 3em;
-    }
-
-    h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-    }
+    h1 { font-size: 3em; margin-bottom: 10px; }
+    h2 { font-size: 2em; margin-bottom: 15px; }
 
     .hero {
       background: #fff8f0;
-      padding: 100px 20px 60px 20px;
+      padding: 80px 20px 40px 20px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     }
 
@@ -42,95 +36,74 @@
       width: 60px;
       height: 3px;
       background: #b97d4f;
-      margin: 25px auto 40px auto;
+      margin: 20px auto 30px auto;
       border-radius: 2px;
     }
 
     section {
-      padding: 60px 20px;
-      max-width: 720px;
+      padding: 40px 20px;
+      max-width: 700px;
       margin: auto;
     }
 
     .box {
       background: #fff;
-      padding: 35px 25px;
-      margin-top: 25px;
+      padding: 25px 20px;
+      margin-top: 20px;
       border-radius: 12px;
       box-shadow: 0 8px 15px rgba(0,0,0,0.05);
       transition: transform 0.3s ease;
     }
 
-    .box:hover {
-      transform: translateY(-3px);
-    }
+    .box:hover { transform: translateY(-3px); }
 
-    a {
-      color: #b97d4f;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
+    a { color: #b97d4f; text-decoration: none; font-weight: 500; }
+    a:hover { text-decoration: underline; }
 
     iframe {
       width: 100%;
-      height: 250px; /* mappa più piccola */
+      height: 250px; /* mappa piccola */
       border: 0;
       border-radius: 12px;
       margin-top: 15px;
     }
 
-    /* Form section */
-    .box iframe {
-      height: 1200px; /* manteniamo il Google Form leggibile */
+    /* Countdown */
+    #countdown {
+      font-size: 1.5em;
+      margin-top: 15px;
+      color: #b97d4f;
+      font-weight: 500;
     }
 
-    p {
-      margin-bottom: 15px;
-    }
+    p { margin-bottom: 15px; }
 
     @media (max-width: 600px) {
       h1 { font-size: 2.2em; }
       h2 { font-size: 1.6em; }
-      .hero { padding: 60px 15px 40px 15px; }
+      .hero { padding: 60px 15px 30px 15px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Hero -->
+  <!-- Hero con countdown -->
   <section class="hero">
     <h1>Elisa & Claudio</h1>
     <div class="divider"></div>
-    <p>4 luglio 2026</p>
+    <p>Vi aspettiamo numerosi al nostro fianco per sostenerci con il vostro affetto nel giorno più importante della nostra Vita</p>
+    <div id="countdown"></div>
   </section>
 
   <!-- Cerimonia -->
   <section>
-    <h2>La cerimonia</h2>
+    <h2>La Chiesa</h2>
     <div class="box">
-      <p>
-        Chiesa di San Giovanni B. Nuovo<br>
-        Via Selice, 104, 40026 Imola BO<br>
-        <strong>Ore 16:30</strong>
-      </p>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.3941681523493!2d11.7221246!3d44.3639857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132b4a8bf033fbcf%3A0xe02b87b181732dc1!2sChiesa%20di%20San%20Giovanni%20B.%20Nuovo!5e0!3m2!1sit!2sit!4v1705234567890!5m2!1sit!2sit" allowfullscreen="" loading="lazy"></iframe>
-      <p><a href="https://www.google.com/maps/place/Chiesa+di+San+Giovanni+B.+Nuovo/@44.3639895,11.7221246,782m/data=!3m2!1e3!4b1!4m6!3m5!1s0x132b4a8bf033fbcf:0xe02b87b181732dc1!8m2!3d44.3639857!4d11.7246995!16s%2Fg%2F1thjr0gd?entry=ttu&g_ep=EgoyMDI2MDEwNy4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D" target="_blank">Apri in Google Maps</a></p>
-    </div>
-  </section>
-
-  <!-- Brindisi -->
-  <section>
-    <h2>Il brindisi</h2>
-    <div class="box">
-      <p>
-        Subito dopo la cerimonia<br>
-        Nel giardino della chiesa<br>
-        Pizza, frutta e bollicine
-      </p>
+      <p>Cattedrale di Santa Maria del Fiore</p>
+      <p>Orario: 10:30</p>
+      <p>Indirizzo: Piazza del Duomo, 50122 Firenze FI</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2883.3301919558417!2d11.258887515591827!3d43.77310847911862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a541e8b7f63db%3A0x22172f9147f279c6!2sCattedrale%20di%20Santa%20Maria%20del%20Fiore!5e0!3m2!1sit!2sit!4v1705234567890!5m2!1sit!2sit" allowfullscreen="" loading="lazy"></iframe>
+      <p>Dopo la cerimonia si terrà un piccolo brindisi nel giardino della chiesa per festeggiare tutti assieme</p>
     </div>
   </section>
 
@@ -141,6 +114,35 @@
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScIJJiOn2W1UykOwusjSlzXklX42RV8eBksygcHt892UhD4Yg/viewform?embedded=true" width="100%" height="1211" frameborder="0" marginheight="0" marginwidth="0">Caricamento…</iframe>
     </div>
   </section>
+
+  <!-- Script countdown -->
+  <script>
+    // Data matrimonio
+    const weddingDate = new Date("July 4, 2026 10:30:00").getTime();
+
+    const countdownElement = document.getElementById("countdown");
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+
+      if(distance < 0) {
+        countdownElement.innerHTML = "Il grande giorno è arrivato!";
+        clearInterval(interval);
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownElement.innerHTML = `${days} giorni ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    const interval = setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
 
 </body>
 </html>
