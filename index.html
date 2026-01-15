@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Elisa & Claudio - Matrimonio</title>
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Roboto', sans-serif;
-      background: #fdf6f0;
+      background: #fefeff;
       color: #3e3e3e;
       line-height: 1.6;
       text-align: center;
@@ -19,50 +19,53 @@
     }
 
     h1, h2 {
-      font-family: 'Playfair Display', serif;
-      color: #b97d4f;
+      font-family: 'Dancing Script', cursive;
+      color: #a3c8f0; /* azzurro pastello chiaro */
+      font-style: italic;
     }
 
     h1 { font-size: 3em; margin-bottom: 10px; }
-    h2 { font-size: 2em; margin-bottom: 15px; }
+    h2 { font-size: 2.2em; margin-bottom: 15px; }
 
     .hero {
-      background: #fff8f0;
-      padding: 80px 20px 40px 20px;
+      background: #f0f8ff; /* leggero azzurro pastello */
+      padding: 80px 20px 60px 20px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     }
 
     .divider {
       width: 60px;
       height: 3px;
-      background: #b97d4f;
+      background: #a3c8f0;
       margin: 20px auto 30px auto;
       border-radius: 2px;
     }
 
     section {
       padding: 40px 20px;
-      max-width: 700px;
+      max-width: 720px;
       margin: auto;
     }
 
     .box {
-      background: #fff;
+      background: #ffffff;
       padding: 25px 20px;
       margin-top: 20px;
       border-radius: 12px;
       box-shadow: 0 8px 15px rgba(0,0,0,0.05);
       transition: transform 0.3s ease;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
     }
 
     .box:hover { transform: translateY(-3px); }
 
-    a { color: #b97d4f; text-decoration: none; font-weight: 500; }
+    a { color: #7fb5e6; text-decoration: none; font-weight: 500; }
     a:hover { text-decoration: underline; }
 
     iframe {
       width: 100%;
-      height: 250px; /* mappa piccola */
+      height: 250px; /* Google Maps piccolo */
       border: 0;
       border-radius: 12px;
       margin-top: 15px;
@@ -72,44 +75,60 @@
     #countdown {
       font-size: 1.5em;
       margin-top: 15px;
-      color: #b97d4f;
+      color: #7fb5e6;
       font-weight: 500;
     }
 
-    p { margin-bottom: 15px; }
+    p { margin-bottom: 15px; font-size: 1em; }
+
+    img.decor { width: 80px; margin: 15px auto; display: block; }
+    img.flutes { width: 100px; margin: 15px auto; display: block; }
 
     @media (max-width: 600px) {
       h1 { font-size: 2.2em; }
-      h2 { font-size: 1.6em; }
-      .hero { padding: 60px 15px 30px 15px; }
+      h2 { font-size: 1.8em; }
+      .hero { padding: 60px 15px 40px 15px; }
+      .box { font-size: 0.95em; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Hero con countdown -->
+  <!-- Hero con nomi, data e countdown -->
   <section class="hero">
     <h1>Elisa & Claudio</h1>
     <div class="divider"></div>
-    <p>Vi aspettiamo numerosi al nostro fianco per sostenerci con il vostro affetto nel giorno più importante della nostra Vita</p>
+    <p>4 luglio 2026</p>
     <div id="countdown"></div>
+    <!-- PNG cuore decorazione info luogo -->
+    <img class="decor" src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="decorazione cuore">
   </section>
 
   <!-- Cerimonia -->
   <section>
-    <h2>La Chiesa</h2>
+    <h2>La Cerimonia</h2>
     <div class="box">
-      <p>Cattedrale di Santa Maria del Fiore</p>
-      <p>Orario: 10:30</p>
-      <p>Indirizzo: Piazza del Duomo, 50122 Firenze FI</p>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2883.3301919558417!2d11.258887515591827!3d43.77310847911862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a541e8b7f63db%3A0x22172f9147f279c6!2sCattedrale%20di%20Santa%20Maria%20del%20Fiore!5e0!3m2!1sit!2sit!4v1705234567890!5m2!1sit!2sit" allowfullscreen="" loading="lazy"></iframe>
-      <p>Dopo la cerimonia si terrà un piccolo brindisi nel giardino della chiesa per festeggiare tutti assieme</p>
+      <p><strong>Chiesa di San Giovanni B. Nuovo</strong></p>
+      <p>Orario: 17:00</p>
+      <p>Indirizzo: Via Selice, 104, 40026 Imola BO</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.3941681523493!2d11.7221246!3d44.3639857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132b4a8bf033fbcf%3A0xe02b87b181732dc1!2sChiesa%20di%20San%20Giovanni%20B.%20Nuovo!5e0!3m2!1sit!2sit!4v1705234567890!5m2!1sit!2sit" allowfullscreen="" loading="lazy"></iframe>
     </div>
   </section>
 
-  <!-- Form RSVP -->
+  <!-- Brindisi -->
   <section>
-    <h2>Conferma presenza</h2>
+    <h2>Il Brindisi</h2>
+    <div class="box">
+      <p>Subito dopo la cerimonia alle <strong>18:00</strong></p>
+      <p>Si terrà nel giardino della chiesa per festeggiare tutti assieme</p>
+      <!-- due flute di prosecco cartoon -->
+      <img class="flutes" src="https://drive.google.com/file/d/1gBKSwHPeExf4xL2vKpg79DFQ6TMMXv2t/view?usp=sharing" alt="due flute di prosecco">
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section>
+    <h2>Conferma Presenza</h2>
     <div class="box">
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScIJJiOn2W1UykOwusjSlzXklX42RV8eBksygcHt892UhD4Yg/viewform?embedded=true" width="100%" height="1211" frameborder="0" marginheight="0" marginwidth="0">Caricamento…</iframe>
     </div>
@@ -117,16 +136,14 @@
 
   <!-- Script countdown -->
   <script>
-    // Data matrimonio
-    const weddingDate = new Date("July 4, 2026 10:30:00").getTime();
-
+    const weddingDate = new Date("July 4, 2026 17:00:00").getTime();
     const countdownElement = document.getElementById("countdown");
 
     function updateCountdown() {
       const now = new Date().getTime();
       const distance = weddingDate - now;
 
-      if(distance < 0) {
+      if(distance < 0){
         countdownElement.innerHTML = "Il grande giorno è arrivato!";
         clearInterval(interval);
         return;
