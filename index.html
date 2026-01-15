@@ -4,13 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Elisa & Claudio - Matrimonio</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- Google Font calligrafico -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=League+Script&family=Monsieur+La+Doulaise&family=MonteCarlo&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: #fefeff;
       color: #3e3e3e;
       line-height: 1.6;
@@ -18,9 +21,10 @@
       padding-bottom: 50px;
     }
 
+    /* SOLO CAMBIO FONT TITOLI */
     h1, h2 {
-      font-family: 'Dancing Script', cursive;
-      color: #a3c8f0; /* azzurro pastello chiaro */
+      font-family: 'MonteCarlo&family', cursive;
+      color: #a3c8f0;
       font-style: italic;
     }
 
@@ -28,8 +32,8 @@
     h2 { font-size: 2.2em; margin-bottom: 15px; }
 
     .hero {
-      background: #f0f8ff; /* leggero azzurro pastello */
-      padding: 80px 20px 60px 20px;
+      background: #f0f8ff;
+      padding: 80px 20px 60px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     }
 
@@ -37,7 +41,7 @@
       width: 60px;
       height: 3px;
       background: #a3c8f0;
-      margin: 20px auto 30px auto;
+      margin: 20px auto 30px;
       border-radius: 2px;
     }
 
@@ -53,25 +57,17 @@
       margin-top: 20px;
       border-radius: 12px;
       box-shadow: 0 8px 15px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease;
-      font-family: 'Roboto', sans-serif;
-      font-weight: 300;
     }
 
-    .box:hover { transform: translateY(-3px); }
-
-    a { color: #7fb5e6; text-decoration: none; font-weight: 500; }
-    a:hover { text-decoration: underline; }
-
+    /* MAPPA: COME PRIMA */
     iframe {
       width: 100%;
-      height: 250px; /* Google Maps piccolo */
+      height: 250px;
       border: 0;
       border-radius: 12px;
       margin-top: 15px;
     }
 
-    /* Countdown */
     #countdown {
       font-size: 1.5em;
       margin-top: 15px;
@@ -81,65 +77,90 @@
 
     p { margin-bottom: 15px; font-size: 1em; }
 
-    img.decor { width: 80px; margin: 15px auto; display: block; }
+    img.decor { width: 300px; margin: 15px auto; display: block; }
     img.flutes { width: 100px; margin: 15px auto; display: block; }
 
     @media (max-width: 600px) {
       h1 { font-size: 2.2em; }
       h2 { font-size: 1.8em; }
-      .hero { padding: 60px 15px 40px 15px; }
+      .hero { padding: 60px 15px 40px; }
       .box { font-size: 0.95em; }
     }
+
+
+    .map-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #a3c8f0;
+  color: #ffffff;
+  border-radius: 30px;
+  font-size: 0.95em;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.map-button:hover {
+  background: #8fbbe8;
+  transform: translateY(-2px);
+}
   </style>
 </head>
+
 <body>
 
-  <!-- Hero con nomi, data e countdown -->
   <section class="hero">
     <h1>Elisa & Claudio</h1>
     <div class="divider"></div>
     <p>4 luglio 2026</p>
     <div id="countdown"></div>
-    <!-- PNG cuore decorazione info luogo -->
-    
   </section>
 
-  <!-- Cerimonia -->
   <section>
     <h2>La Cerimonia</h2>
     <div class="box">
-      <p><strong>Chiesa di San Giovanni B. Nuovo</strong></p>
-      <p>Orario: 17:00</p>
-      <p>Indirizzo: Via Selice, 104, 40026 Imola BO</p>
-      <img src="1.2.png" alt="1.1">
-    </div>
+  <p><strong>Chiesa di San Giovanni B. Nuovo</strong></p>
+  <p>Orario: 17:00</p>
+  <p>Via Selice, 104, 40026 Imola BO</p>
+
+  <!-- BOTTONE SOPRA LA MAPPA O L’IMMAGINE -->
+  <a 
+    href="https://www.google.com/maps/dir/?api=1&destination=Chiesa+di+San+Giovanni+B.+Nuovo+Imola" 
+    target="_blank" 
+    class="map-button">
+    📍 Ottieni indicazioni
+  </a>
+
+  
+
+  <!-- IMMAGINE DECORATIVA -->
+  <img class="decor" src="1.2.png" alt="Decorazione">
+</div>
   </section>
 
-  <!-- Brindisi -->
   <section>
     <h2>Il Brindisi</h2>
     <div class="box">
       <p>Subito dopo la cerimonia alle <strong>18:00</strong></p>
-      <p>Si terrà nel giardino della chiesa per festeggiare tutti assieme</p>
-      <!-- due flute di prosecco cartoon -->
-      <img src="2.2.png" alt="2.2">
+      <p>Nel giardino della chiesa per festeggiare tutti assieme</p>
+      <img src="2.2.png" alt="">
     </div>
   </section>
 
-  <!-- RSVP -->
   <section>
-    
-    
-   <h2>Conferma Presenza</h2>
+    <h2>Conferma Presenza</h2>
     <div class="box">
-      
-       
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScIJJiOn2W1UykOwusjSlzXklX42RV8eBksygcHt892UhD4Yg/viewform?embedded=true" width="200%" height="1211" frameborder="0" marginheight="0" marginwidth="0">Caricamento…</iframe>
-      <img src="4.4.png" alt="4.4">
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLScIJJiOn2W1UykOwusjSlzXklX42RV8eBksygcHt892UhD4Yg/viewform?embedded=true"
+        width="200%"
+        height="1211"
+        frameborder="0">
+      </iframe>
+      <img src="4.4.png" alt="">
     </div>
   </section>
 
-  <!-- Script countdown -->
   <script>
     const weddingDate = new Date("July 4, 2026 17:00:00").getTime();
     const countdownElement = document.getElementById("countdown");
@@ -148,9 +169,8 @@
       const now = new Date().getTime();
       const distance = weddingDate - now;
 
-      if(distance < 0){
+      if (distance < 0) {
         countdownElement.innerHTML = "Il grande giorno è arrivato!";
-        clearInterval(interval);
         return;
       }
 
@@ -162,7 +182,7 @@
       countdownElement.innerHTML = `${days} giorni ${hours}h ${minutes}m ${seconds}s`;
     }
 
-    const interval = setInterval(updateCountdown, 1000);
+    setInterval(updateCountdown, 1000);
     updateCountdown();
   </script>
 
