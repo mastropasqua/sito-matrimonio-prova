@@ -10,19 +10,16 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Tangerine', "Segoe UI", sans-serif;
-      font-weight: 700;
-      font-size: 30px;
+      font-family: 'Tangerine', cursive;
       background: #fefeff;
       color: #3e3e3e;
-      line-height: 1.2; /* Aumentato leggermente per leggibilità */
       text-align: center;
       padding-top: 50px;
     }
-    h1, h2 {
+    h2 {
       font-family: 'Monsieur La Doulaise', cursive;
       color: #a3c8f0;
-      font-size: 70px;
+      font-size: 80px;
       font-weight: 400;
       margin-bottom: 20px;
     }
@@ -32,37 +29,96 @@
       padding: 35px 20px;
       border-radius: 12px;
       box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+      font-size: 35px;
+      font-weight: 700;
     }
-    .gift-button {
-      display: inline-block;
-      margin: 25px 0;
-      padding: 15px 30px;
-      background: #a3c8f0;
+    
+    .btn {
+      display: block;
+      margin: 15px auto;
+      padding: 10px 25px;
       color: #ffffff;
       border-radius: 30px;
-      font-size: 1em;
+      font-size: 40px;
       text-decoration: none;
-      transition: background 0.3s ease;
+      max-width: 250px;
+      transition: transform 0.2s;
+      cursor: pointer;
+      border: none;
+      width: 100%;
+      font-family: 'Tangerine', cursive;
     }
-    .gift-button:hover { background: #8fbbe8; }
-    .back-link { font-size: 0.8em; color: #a3c8f0; text-decoration: none; display: block; margin-top: 20px; }
+    .btn:hover { transform: translateY(-2px); }
+    
+    .btn-satispay { background: #ff4a5a; }
+    .btn-paypal { background: #0070ba; }
+    .btn-iban { background: #a3c8f0; }
+    
+    #iban-display {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      border: 1px dashed #a3c8f0;
+    }
+
+    /* Stile macchina da scrivere sottile per i dati tecnici */
+    .typewriter-text {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 18px;
+      font-weight: 400; /* Forza il non-bold */
+      color: #555;
+      line-height: 1.6;
+      margin: 5px 0;
+    }
+
+    .copy-msg {
+      font-family: 'Tangerine', cursive;
+      font-size: 28px;
+      color: #4caf50;
+      display: none;
+      margin-bottom: 10px;
+    }
+    
+    .back-link { font-size: 30px; color: #a3c8f0; text-decoration: none; display: block; margin-top: 30px; }
   </style>
 </head>
 <body>
   <section>
     <h2>Il nostro sogno</h2>
     <div class="box">
-      <p>La vostra presenza è per noi il dono più grande.</p>
-      <p>Se desiderate contribuire alla realizzazione della nostra Luna di Miele, potete farlo qui sotto:</p>
+      <p style="margin-bottom: 20px;">Se desiderate contribuire alla nostra Luna di Miele:</p>
       
-      <a href="https://www.paypal.com/donate/?hosted_button_id=S6FC3U53XDMQY" class="gift-button">
-        📍 Contribuisci al viaggio
-      </a>
+      <button onclick="window.open('https://web.satispay.com/download/qrcode/S6Y-SVN--61EA93D2-35F7-4805-8AA4-3AD929E481C8?locale=it', '_blank')" class="btn btn-satispay">Satispay</button>
 
-      <p style="font-size: 0.7em; color: #888;">(Puoi usare la tua carta o il conto PayPal)</p>
+      <button onclick="window.open('https://www.paypal.com/donate/?hosted_button_id=S6FC3U53XDMQY', '_blank')" class="btn btn-paypal">PayPal</button>
+      
+      <button onclick="copyIban()" class="btn btn-iban">Iban</button>
+
+      <div id="iban-display">
+        <div id="copy-success" class="copy-msg">IBAN Copiato negli appunti!</div>
+        <p class="typewriter-text">IBAN: IT 00 X 00000 00000 000000000000</p>
+        <p class="typewriter-text">Intestato a: Claudio e Elisa</p>
+        <p class="typewriter-text">Causale: Regalo di Nozze Claudio e Elisa</p>
+      </div>
       
       <a href="index.html" class="back-link">← Torna al sito</a>
     </div>
   </section>
+
+  <script>
+    function copyIban() {
+      const iban = "IT 00 X 00000 00000 000000000000";
+      navigator.clipboard.writeText(iban).then(() => {
+        document.getElementById('iban-display').style.display = 'block';
+        const msg = document.getElementById('copy-success');
+        msg.style.display = 'block';
+        setTimeout(() => {
+          msg.style.display = 'none';
+        }, 4000);
+      });
+    }
+  </script>
 </body>
 </html>
