@@ -41,7 +41,7 @@
       border-radius: 30px;
       font-size: 40px;
       text-decoration: none;
-      max-width: 250px;
+      max-width: 320px; /* Allargato un filo per far stare "Carte di Credito" */
       transition: transform 0.2s;
       cursor: pointer;
       border: none;
@@ -52,6 +52,7 @@
     
     .btn-satispay { background: #ff4a5a; }
     .btn-paypal { background: #0070ba; }
+    .btn-carte { background: #4e5d6c; } /* Grigio scuro elegante per le carte */
     .btn-iban { background: #a3c8f0; }
     
     #iban-display {
@@ -63,22 +64,23 @@
       border: 1px dashed #a3c8f0;
     }
 
-    /* Stile macchina da scrivere sottile per i dati tecnici */
     .typewriter-text {
       font-family: 'Courier New', Courier, monospace;
       font-size: 18px;
-      font-weight: 400; /* Forza il non-bold */
+      font-weight: 400;
       color: #555;
       line-height: 1.6;
       margin: 5px 0;
     }
 
     .copy-msg {
-      font-family: 'Tangerine', cursive;
-      font-size: 28px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 16px;
+      font-weight: 400;
       color: #4caf50;
       display: none;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
     }
     
     .back-link { font-size: 30px; color: #a3c8f0; text-decoration: none; display: block; margin-top: 30px; }
@@ -93,11 +95,13 @@
       <button onclick="window.open('https://web.satispay.com/download/qrcode/S6Y-SVN--61EA93D2-35F7-4805-8AA4-3AD929E481C8?locale=it', '_blank')" class="btn btn-satispay">Satispay</button>
 
       <button onclick="window.open('https://www.paypal.com/donate/?hosted_button_id=S6FC3U53XDMQY', '_blank')" class="btn btn-paypal">PayPal</button>
+
+      <button onclick="window.open('https://www.paypal.com/donate/?hosted_button_id=S6FC3U53XDMQY', '_blank')" class="btn btn-carte">Carte di Credito</button>
       
       <button onclick="copyIban()" class="btn btn-iban">Iban</button>
 
       <div id="iban-display">
-        <div id="copy-success" class="copy-msg">Iban copiato negli appunti!</div>
+        <div id="copy-success" class="copy-msg">IBAN Copiato negli appunti!</div>
         <p class="typewriter-text">IBAN: IT 00 X 00000 00000 000000000000</p>
         <p class="typewriter-text">Intestato a: Claudio e Elisa</p>
         <p class="typewriter-text">Causale: Regalo di Nozze Claudio e Elisa</p>
