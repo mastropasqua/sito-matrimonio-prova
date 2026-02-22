@@ -7,18 +7,28 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+
+
+
+
+
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Tangerine', cursive;
+      font-family: 'Yellowtail', cursive;
       background: #fefeff;
       color: #3e3e3e;
       text-align: center;
       padding-top: 50px;
     }
     h2 {
-      font-family: 'Monsieur La Doulaise', cursive;
-      color: #a3c8f0;
+      font-family: 'Yellowtail', cursive;
+      color: #b9a0a6;
       font-size: 80px;
       font-weight: 400;
       margin-bottom: 20px;
@@ -46,14 +56,14 @@
       cursor: pointer;
       border: none;
       width: 100%;
-      font-family: 'Tangerine', cursive;
+      font-family: 'Yellowtail', cursive;
     }
     .btn:hover { transform: translateY(-2px); }
     
-    .btn-satispay { background: #ff4a5a; }
+    .btn-satispay { background: #962e36; }
     .btn-paypal { background: #0070ba; }
     .btn-carte { background: #4e5d6c; } /* Grigio scuro elegante per le carte */
-    .btn-iban { background: #a3c8f0; }
+    .btn-iban { background: #d64973; }
     
     #iban-display {
       display: none;
@@ -83,7 +93,7 @@
       text-transform: uppercase;
     }
     
-    .back-link { font-size: 30px; color: #a3c8f0; text-decoration: none; display: block; margin-top: 30px; }
+    .back-link { font-size: 30px; color: #b9a0a6; text-decoration: none; display: block; margin-top: 30px; }
   </style>
 </head>
 <body>
@@ -92,18 +102,18 @@
     <div class="box">
       <p style="margin-bottom: 20px;">Se desiderate contribuire alla nostra Luna di Miele:</p>
       
-      <button onclick="window.open('https://web.satispay.com/download/qrcode/S6Y-SVN--61EA93D2-35F7-4805-8AA4-3AD929E481C8?locale=it', '_blank')" class="btn btn-satispay">Satispay</button>
+      <button onclick="window.open('https://web.satispay.com/download/qrcode/S6Y-SVN--B0308E4C-8283-41E9-95A5-E9BA7CBBA85B?locale=it', '_blank')" class="btn btn-satispay">Satispay</button>
 
-      <button onclick="window.open('https://www.paypal.com/donate/?hosted_button_id=S6FC3U53XDMQY', '_blank')" class="btn btn-paypal">PayPal</button>
+      <!--<button onclick="window.open('https://www.paypal.com/donate/?hosted_button_id=S6FC3U53XDMQY', '_blank')" class="btn btn-paypal">PayPal</button>
 
-      <button onclick="window.open('https://www.paypal.com/donate/?hosted_button_id=S6FC3U53XDMQY', '_blank')" class="btn btn-carte">Carte di Credito</button>
+      <button onclick="window.open('https://www.paypal.com/donate/?hosted_button_id=S6FC3U53XDMQY', '_blank')" class="btn btn-carte">Carte di Credito</button> -->
       
       <button onclick="copyIban()" class="btn btn-iban">Iban</button>
 
       <div id="iban-display">
         <div id="copy-success" class="copy-msg">IBAN Copiato negli appunti!</div>
-        <p class="typewriter-text">IBAN: IT 00 X 00000 00000 000000000000</p>
-        <p class="typewriter-text">Intestato a: Claudio e Elisa</p>
+        <p class="typewriter-text">IBAN: IT 89 X 05080 21015 CC0150645556</p>
+        <p class="typewriter-text">Intestato a: Claudio Turri  e Elisa Baraccani</p>
         <p class="typewriter-text">Causale: Regalo di Nozze Claudio e Elisa</p>
       </div>
       
@@ -113,7 +123,7 @@
 
   <script>
     function copyIban() {
-      const iban = "IT 00 X 00000 00000 000000000000";
+      const iban = "IT89X0508021015CC0150645556";
       navigator.clipboard.writeText(iban).then(() => {
         document.getElementById('iban-display').style.display = 'block';
         const msg = document.getElementById('copy-success');
