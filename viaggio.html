@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Un pensiero - Elisa & Claudio</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Allura', cursive;
+      background: #fefeff;
+      color: #3e3e3e;
+      text-align: center;
+      padding-top: 40px;
+      line-height: 1.2;
+    }
+
+    section { 
+      padding: 20px; 
+      max-width: 420px; 
+      margin: auto; 
+    }
+
+    h2 {
+      color: #b9a0a6;
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .box {
+      background: #ffffff;
+      padding: 30px 20px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    }
+    
+    .descrizione {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .btn-iban {
+      display: inline-block;
+      margin: 10px auto;
+      padding: 15px 20px;
+      background: #b9a0a6;
+      color: #ffffff;
+      border-radius: 40px;
+      font-family: 'Allura', cursive;
+      font-size: 26px;
+      text-decoration: none;
+      width: 100%;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(185, 160, 166, 0.2);
+    }
+    
+    /* Box IBAN inizialmente nascosto */
+    #iban-display {
+      display: none; 
+      margin-top: 20px;
+      padding: 15px;
+      background: #fdecf0;
+      border-radius: 12px;
+      border: 1px dashed #b9a0a6;
+    }
+
+    .typewriter-text {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 14px;
+      font-weight: bold;
+      word-break: break-all;
+      margin: 10px 0;
+      color: #444;
+    }
+
+    .copy-msg {
+      font-family: sans-serif;
+      font-size: 12px;
+      color: #4caf50;
+      font-weight: bold;
+      margin-bottom: 5px;
+      display: none;
+    }
+    
+    .back-link { 
+      font-size: 26px; 
+      color: #b9a0a6; 
+      text-decoration: none; 
+      display: block; 
+      margin-top: 30px; 
+    }
+  </style>
+</head>
+<body>
+
+  <section>
+    <h2>Orizzonti</h2>
+    
+    <div class="box">
+      <p class="descrizione">
+        Se desiderate condividere 
+      </p>
+      <p class="descrizione" style="font-size: 20px;">
+        il nostro viaggio di nozze
+      </p>
+      
+      <button onclick="showAndCopy()" class="btn-iban">Visualizza IBAN</button>
+
+      <div id="iban-display">
+        <div id="copy-success" class="copy-msg">✅ COPIATO</div>
+        <p class="typewriter-text" id="iban-val">IT89X0508021015CC0150645556</p>
+        <p style="font-size: 19px;">C. Turri - E. Baraccani</p>
+      </div>
+      
+      <a href="index.html" class="back-link">← Indietro</a>
+    </div>
+  </section>
+
+  <script>
+    function showAndCopy() {
+      // 1. Mostra sempre il box
+      const display = document.getElementById('iban-display');
+      display.style.display = 'block';
+
+      // 2. Prova a copiare
+      const ibanText = "IT89X0508021015CC0150645556";
+      navigator.clipboard.writeText(ibanText).then(() => {
+        const msg = document.getElementById('copy-success');
+        msg.style.display = 'block';
+        setTimeout(() => { msg.style.display = 'none'; }, 2500);
+      }).catch(err => {
+        console.log("Copia automatica non riuscita, l'utente può copiare manualmente.");
+      });
+    }
+  </script>
+
+</body>
+</html> 

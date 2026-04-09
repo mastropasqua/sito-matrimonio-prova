@@ -3,121 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Il nostro sogno - Elisa & Claudio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
-
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
-
-
+  <title>Ristrutturazione Parrocchia - Elisa & Claudio</title>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
 
-
-
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    
     body {
       font-family: 'Allura', cursive;
       background: #fefeff;
       color: #3e3e3e;
       text-align: center;
       padding-top: 25px;
+      line-height: 1.4;
     }
+
+    section { 
+      padding: 20px 15px; 
+      max-width: 500px; /* Ottimizzato per mobile */
+      margin: auto; 
+    }
+
     h2 {
-      font-family: 'Allura', cursive;
       color: #b9a0a6;
-      font-size: 40px;
+      font-size: 45px;
       font-weight: 400;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
-    section { padding: 40px 20px; max-width: 720px; margin: auto; }
+
     .box {
       background: #ffffff;
-      padding: 35px 20px;
-      border-radius: 12px;
+      padding: 30px 20px;
+      border-radius: 15px;
       box-shadow: 0 8px 15px rgba(0,0,0,0.05);
-      font-size: 25px;
-      font-weight: 700;
+      font-size: 26px;
     }
     
-    .btn {
+    .descrizione {
+      margin-bottom: 25px;
+      font-size: 24px;
+    }
+
+    .btn-iban {
       display: block;
       margin: 15px auto;
-      padding: 10px 25px;
+      padding: 15px 10px;
+      background: #b9a0a6;
       color: #ffffff;
-      border-radius: 30px;
-      font-size: 40px;
+      border-radius: 40px;
+      font-size: 32px;
       text-decoration: none;
-      max-width: 320px; /* Allargato un filo per far stare "Carte di Credito" */
+      width: 100%;
+      max-width: 320px;
       transition: transform 0.2s;
       cursor: pointer;
       border: none;
-      width: 100%;
       font-family: 'Allura', cursive;
+      box-shadow: 0 4px 10px rgba(185, 160, 166, 0.3);
     }
-    .btn:hover { transform: translateY(-2px); }
     
-    .btn-satispay { background: #962e36; }
-    .btn-paypal { background: #0070ba; }
-    .btn-carte { background: #4e5d6c; } /* Grigio scuro elegante per le carte */
-    .btn-iban { background: #d64973; }
+    .btn-iban:active { transform: scale(0.95); }
     
     #iban-display {
-      display: none;
+      display: none; /* Appare dopo il click */
       margin-top: 20px;
       padding: 20px;
-      background: #f8f9fa;
-      border-radius: 8px;
-      border: 1px dashed #a3c8f0;
+      background: #fdecf0;
+      border-radius: 12px;
+      border: 1px dashed #b9a0a6;
     }
 
     .typewriter-text {
       font-family: 'Courier New', Courier, monospace;
-      font-size: 18px;
-      font-weight: 400;
+      font-size: 16px; /* Più piccolo per far stare l'IBAN su una riga su mobile */
+      font-weight: bold;
       color: #555;
       line-height: 1.6;
-      margin: 5px 0;
+      margin: 8px 0;
+      word-break: break-all; /* Evita che l'IBAN esca dallo schermo */
     }
 
     .copy-msg {
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 16px;
-      font-weight: 400;
+      font-family: sans-serif;
+      font-size: 14px;
+      font-weight: bold;
       color: #4caf50;
       display: none;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
       text-transform: uppercase;
     }
     
-    .back-link { font-size: 30px; color: #b9a0a6; text-decoration: none; display: block; margin-top: 30px; }
+    .back-link { 
+      font-size: 28px; 
+      color: #b9a0a6; 
+      text-decoration: none; 
+      display: block; 
+      margin-top: 30px; 
+    }
   </style>
 </head>
 <body>
+
   <section>
-    <h2>Il nostro sogno</h2>
+    <h2>Un dono per la comunità</h2>
+    
     <div class="box">
-      <p style="margin-bottom: 20px;">Se desiderate contribuire alla nostra Luna di Miele:</p>
+      <p class="descrizione">
+        Abbiamo deciso che i fondi raccolti qui saranno interamente devoluti alla 
+        <strong>ristrutturazione della nostra parrocchia</strong>.
+      </p>
       
-      <button onclick="window.open('https://web.satispay.com/download/qrcode/S6Y-SVN--B0308E4C-8283-41E9-95A5-E9BA7CBBA85B?locale=it', '_blank')" class="btn btn-satispay">Satispay</button>
-
-      <!--<button onclick="window.open('https://www.paypal.com/donate/?hosted_button_id=S6FC3U53XDMQY', '_blank')" class="btn btn-paypal">PayPal</button>
-
-      <button onclick="window.open('https://www.paypal.com/donate/?hosted_button_id=S6FC3U53XDMQY', '_blank')" class="btn btn-carte">Carte di Credito</button> -->
+      <p style="font-size: 20px; margin-bottom: 10px;">Clicca sotto per copiare l'IBAN:</p>
       
-      <button onclick="copyIban()" class="btn btn-iban">Iban</button>
+      <button onclick="copyIban()" class="btn-iban">📋 Copia IBAN</button>
 
       <div id="iban-display">
-        <div id="copy-success" class="copy-msg">IBAN Copiato negli appunti!</div>
-        <p class="typewriter-text">IBAN: IT 89 X 05080 21015 CC0150645556</p>
-        <p class="typewriter-text">Intestato a: Claudio Turri  e Elisa Baraccani</p>
-        <p class="typewriter-text">Causale: Regalo di Nozze Claudio e Elisa</p>
+        <div id="copy-success" class="copy-msg">✅ IBAN Copiato negli appunti!</div>
+        <p class="typewriter-text" id="iban-text">IBAN: ITXX X XXXXX XXXXX XXXXXXXXXXX</p>
+        <p class="typewriter-text">Intestato a: Parrocchia di San Giovanni B. Nuovo</p>
+        <p class="typewriter-text">Causale: Erogazione liberale Matrimonio Elisa e Claudio</p>
       </div>
       
       <a href="index.html" class="back-link">← Torna al sito</a>
@@ -126,16 +133,27 @@
 
   <script>
     function copyIban() {
-      const iban = "IT89X0508021015CC0150645556";
-      navigator.clipboard.writeText(iban).then(() => {
+      // Sostituisci la stringa sotto con l'IBAN reale quando lo avrai
+      const ibanReale = "ITXXXXXXXXXXXXXXXXXXXXXXXXX"; 
+      
+      navigator.clipboard.writeText(ibanReale).then(() => {
+        // Mostra il box con i dettagli
         document.getElementById('iban-display').style.display = 'block';
+        
+        // Mostra il messaggio di successo
         const msg = document.getElementById('copy-success');
         msg.style.display = 'block';
+        
+        // Nascondi il messaggio dopo 4 secondi
         setTimeout(() => {
           msg.style.display = 'none';
         }, 4000);
+      }).catch(err => {
+        // Fallback se il browser blocca la copia automatica
+        document.getElementById('iban-display').style.display = 'block';
       });
     }
   </script>
+
 </body>
 </html>
