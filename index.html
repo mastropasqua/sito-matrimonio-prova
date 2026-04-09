@@ -5,130 +5,110 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Elisa & Claudio - Matrimonio</title>
 
-  <!-- Google Font calligrafico -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
-    
-    
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Meow+Script&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
-
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
 
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'Allura', "Segoe UI", sans-serif;
-      font-weight: 10;
-      font-size: 25px;
+      font-family: 'Allura', cursive;
+      font-size: 26px;
       background: #fefeff;
       color: #3e3e3e;
-      line-height: 0.6;
+      line-height: 1.3;
       text-align: center;
-      padding-bottom: 000px;
+      padding-bottom: 40px;
     }
 
-    /* SOLO CAMBIO FONT TITOLI */
-    h1, h2 {
-      font-family: 'Allura', cursive;
+    h1 {
+      font-size: 55px;
       color: #b9a0a6;
-      font-style: inormal;
-      font-weight: 400;
-      font-size: 40px;
+      margin-bottom: 5px;
     }
-
-    
 
     .hero {
       background: #fdecf0;
-      padding: 80px 20px 60px;
+      padding: 60px 15px 50px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     }
 
     .divider {
-      width: 60px;
-      height: 3px;
+      width: 50px;
+      height: 2px;
       background: #b9a0a6;
-      margin: 20px auto 30px;
-      border-radius: 2px;
+      margin: 15px auto 25px;
+    }
+
+    /* COUNTDOWN BEN VISIBILE */
+    #countdown {
+      display: block;
+      font-size: 32px;
+      color: #b9a0a6;
+      margin-top: 20px;
+      font-weight: bold;
+      min-height: 40px; /* Evita salti di layout al caricamento */
     }
 
     section {
-      padding: 40px 20px;
-      max-width: 720px;
+      padding: 30px 15px;
+      max-width: 500px;
       margin: auto;
     }
 
     .box {
       background: #ffffff;
-      padding: 25px 20px;
-      margin-top: 20px;
-      border-radius: 12px;
-      box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+      padding: 25px 15px;
+      margin-top: 15px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     }
 
-    /* MAPPA: COME PRIMA */
+    h2 {
+      font-size: 40px;
+      color: #b9a0a6;
+      margin-bottom: 10px;
+    }
+
+    img.decor { 
+      width: 80%; 
+      max-width: 250px; 
+      margin: 20px auto; 
+      display: block; 
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .map-button {
+      display: block;
+      width: 90%;
+      padding: 15px 10px;
+      background: #b9a0a6;
+      color: #ffffff;
+      border-radius: 40px;
+      font-family: 'Allura', cursive;
+      font-size: 30px;
+      text-decoration: none;
+      line-height: 1;
+      box-shadow: 0 4px 10px rgba(185, 160, 166, 0.3);
+    }
+
     iframe {
       width: 100%;
-      height: 250px;
+      height: 600px;
       border: 0;
       border-radius: 12px;
       margin-top: 15px;
     }
 
-    #countdown {
-      font-size: 1.5em;
-      margin-top: 15px;
-      color: #b9a0a6;
-      font-weight: 500;
-    }
-
-    p { margin-bottom: 15px; font-size: 1em; }
-
-    img.decor { width: 300px; margin: 15px auto; display: block; }
-    img.flutes { width: 100px; margin: 15px auto; display: block; }
-
-    @media (max-width: 600px) {
-      h1 { font-size: 2.2em; }
-      h2 { font-size: 1.8em; }
-      .hero { padding: 60px 15px 40px; }
-      .box { font-size: 0.95em; }
-    }
-
-
-    .map-button {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 20px;
-  background: #b9a0a6;
-  color: #ffffff;
-  border-radius: 30px;
-  font-size: 0.95em;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.map-button:hover {
-  background: #b88793;
-  transform: translateY(-2px);
-}
+    strong { font-weight: 400; color: #b9a0a6; }
   </style>
 </head>
 
@@ -137,107 +117,80 @@
   <section class="hero">
     <h1>Elisa e Claudio</h1>
     <div class="divider"></div>
-    <p>4 luglio 2026</p>
-    <div id="countdown"></div>
+    <p>4 Luglio 2026</p>
+    <div id="countdown">Caricamento...</div>
   </section>
 
   <section>
     <h2>La Cerimonia</h2>
     <div class="box">
-  <p><strong>Chiesa di San Giovanni B. Nuovo</strong></p>
-  <p>Orario: 17:00</p>
-  <p>Via Selice, 104, 40026 Imola</p>
+      <p><strong>Chiesa di San Giovanni B. Nuovo</strong></p>
+      <p>Orario: 17:00</p>
+      <p>Via Selice, 104, Imola</p>
 
-  <!-- BOTTONE SOPRA LA MAPPA O L’IMMAGINE -->
-  <a 
-    href="https://www.google.com/maps/dir/?api=1&destination=Chiesa+di+San+Giovanni+B.+Nuovo+Imola" 
-    target="_blank" 
-    class="map-button">
-    📍 Ottieni indicazioni
-  </a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Via+Selice+104+Imola" target="_blank" class="map-button">
+        📍 Ottieni indicazioni
+      </a>
 
-  
-
-  <!-- IMMAGINE DECORATIVA -->
-  <img class="decor" src="1.2.png" alt="Decorazione">
-</div>
+      <img class="decor" src="1.2.png" alt="Decorazione">
+    </div>
   </section>
 
   <section>
     <h2>Il Brindisi</h2>
     <div class="box">
       <p>Subito dopo la cerimonia,</p>
-      <p>brinda con noi </p>
+      <p>brinda con noi</p>
       <p>nel giardino della chiesa</p>
-      <img src="2.2.png" alt="">
+      <img class="decor" src="2.2.png" alt="Brindisi">
     </div>
   </section>
 
   <section>
-
-
-     
-
-
-
-
     <h2>Conferma Presenza</h2>
     <div class="box">
-
-      <section style="text-align: center; margin: 20px auto; max-width: 800px;">
-      <p>Non vediamo l'ora</p>
-      <p>di festeggiare con voi!</p>
-      <p> </p>
-      <p>Per organizzare il tutto</p>
-      <p>è gradita la conferma entro il</p>
-      <p><span style="font-weight: bold;">4 maggio 2026</span>.</p>
-      </section>
+      <p>Non vediamo l'ora di festeggiare con voi!</p>
+      <p>Conferma gradita entro il</p>
+      <p><strong>4 Maggio 2026</strong></p>
+      
       <iframe
         src="https://docs.google.com/forms/d/e/1FAIpQLScIJJiOn2W1UykOwusjSlzXklX42RV8eBksygcHt892UhD4Yg/viewform?embedded=true"
-        width="200%"
-        height="1211"
         frameborder="0">
+        Caricamento...
       </iframe>
-      <img src="4.4.png" alt="">
+      <img class="decor" src="4.4.png" alt="Decorazione">
     </div>
   </section>
 
-<section>
+  <section>
     <h2>Il nostro sogno</h2>
     <div class="box">
-      <p>La vostra presenza è per noi</p>
-<p>il dono più grande.</p>
-
-<br>
-
-<p>Se desiderate contribuire alla</p>
-<p>realizzazione della nostra</p>
-<p>Luna di Miele,</p>
-<p>potete farlo qui sotto:</p>
+      <p>La vostra presenza è per noi il dono più grande.</p>
+      <br>
+      <p>Se desiderate contribuire alla nostra felicità:</p>
       
-      <a href="regalo.html" class="map-button">
-        🎁 Info sul regalo
-      </a>
+      <div class="button-container">
+        <a href="regalo.html" class="map-button">
+          🎁 Ristrutturazione parrocchia
+        </a>
+        <a href="viaggio.html" class="map-button">
+          ✈️ Viaggio di nozze
+        </a>
+      </div>
     </div>
-</section>
-
-
-
-
-
-
-
+  </section>
 
   <script>
-    const weddingDate = new Date("July 4, 2026 17:00:00").getTime();
-    const countdownElement = document.getElementById("countdown");
-
     function updateCountdown() {
+      // Formato data ISO per massima compatibilità mobile
+      const targetDate = new Date("2026-07-04T17:00:00").getTime();
       const now = new Date().getTime();
-      const distance = weddingDate - now;
+      const distance = targetDate - now;
+
+      const countdownElement = document.getElementById("countdown");
 
       if (distance < 0) {
-        countdownElement.innerHTML = "Il grande giorno è arrivato!";
+        countdownElement.innerHTML = "Oggi è il grande giorno!";
         return;
       }
 
@@ -246,9 +199,10 @@
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      countdownElement.innerHTML = `${days} giorni ${hours}h ${minutes}m ${seconds}s`;
+      countdownElement.innerHTML = days + "g " + hours + "h " + minutes + "m " + seconds + "s";
     }
 
+    // Avvia subito e aggiorna ogni secondo
     setInterval(updateCountdown, 1000);
     updateCountdown();
   </script>
